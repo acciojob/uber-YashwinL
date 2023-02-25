@@ -49,7 +49,7 @@ public class CustomerServiceImpl implements CustomerService {
 
 		if(!driverList.isEmpty()){
 			for(Driver i : driverList){
-				if(i.getCab().isAvailable()){
+				if(i.getCab().getAvailable()){
 					tripBooking.setCustomer(customer);
 					tripBooking.setDriver(i);
 					tripBooking.setStatus(TripStatus.CONFIRMED);
