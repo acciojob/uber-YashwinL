@@ -59,6 +59,7 @@ public class CustomerServiceImpl implements CustomerService {
 					tripBooking.setBill(i.getCab().getPerKmRate()*distanceInKm);
 					customer.getTripBookingList().add(tripBooking);
 					i.getTripBookingList().add(tripBooking);
+					tripBookingRepository2.save(tripBooking);
 					customerRepository2.save(customer);
 					driverRepository2.save(i);
 					break;
@@ -94,6 +95,7 @@ public class CustomerServiceImpl implements CustomerService {
 //				break;
 //			}
 //		}
+		tripBookingRepository2.save(tripBooking);
 		customerRepository2.save(customer);
 		driverRepository2.save(driver);
 
@@ -121,6 +123,7 @@ public class CustomerServiceImpl implements CustomerService {
 //				break;
 //			}
 //		}
+		tripBookingRepository2.save(tripBooking);
 		customerRepository2.save(customer);
 		driverRepository2.save(driver);
 	}
